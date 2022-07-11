@@ -1,0 +1,102 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the dropdown component.
+// -----------------------------------------------------------------------------
+
+
+.nav-dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 9px;
+
+    &:focus {
+        color: $brand-color;
+    }
+}
+
+.dropdown-icon {
+    width: 32px;
+}
+
+.rotated {
+    width: 18px;
+}
+
+.dropdown-menu {
+    left: -20px;
+    top: 158%;
+
+    background-color: $dark-grey;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $text-color;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+
+    &:hover {
+        background-color: transparent;
+
+        color: $brand-color;
+    }
+
+    &:focus {
+        background-color: transparent;
+
+        color: $brand-color;
+    }
+}
+
+.dropdown-toggle.show {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    &:after {
+        display: none;
+    }
+}
+
+.razer-dropdown {
+    position: relative;
+}
+
+.razer-drop-menu {
+    position: absolute;
+    left: -20px;
+    top: 158%;
+
+    display: none;
+    padding-top: 14px;
+
+    background-color: $dark-grey;
+}
+
+.razer-subtoggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px
+}
+
+.razer-drop-submenu {
+    position: absolute;
+    left: 100%;
+    top: -25%;
+
+    display: none;
+    width: 200px;
+    padding-top: 14px;
+
+    background-color: $dark-grey;
+}
+
+
+.open-dropdown {
+    display: block;
+}

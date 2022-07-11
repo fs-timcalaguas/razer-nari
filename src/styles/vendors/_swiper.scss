@@ -12,11 +12,12 @@
  .swiper-container {
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   list-style: none;
   padding: 0;
   /* Fix of Webkit flickering */
   z-index: 1;
+  padding-bottom: 65px;
 }
 .swiper-container-no-flexbox .swiper-slide {
   float: left;
@@ -207,6 +208,7 @@
 }
 .swiper-pagination {
   position: absolute;
+  bottom: 500px;
   text-align: center;
   -webkit-transition: 300ms opacity;
   -o-transition: 300ms opacity;
@@ -272,8 +274,7 @@
   height: 8px;
   display: inline-block;
   border-radius: 100%;
-  background: #000;
-  opacity: 0.2;
+  background: #595959;
 }
 button.swiper-pagination-bullet {
   border: none;
@@ -290,7 +291,9 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #007aff;
+  background: $brand-color;
+  outline: 1px $brand-color solid;
+  outline-offset: 2px;
 }
 .swiper-container-vertical > .swiper-pagination-bullets {
   right: 10px;

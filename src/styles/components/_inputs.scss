@@ -1,0 +1,61 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the input field component.
+// -----------------------------------------------------------------------------
+
+
+.form-control {
+    
+    padding-top: 11.5px;
+    padding-bottom: 11px;
+    padding-inline: 14px;
+    background-color: transparent;
+    
+    color: #fff;
+    font-size: 11.5px;
+    font-weight: 400;
+    letter-spacing: .5px;
+
+    &:focus {
+        
+        background-color: transparent;
+        border-color: $brand-color;
+
+        font-weight: 400;
+        color: #fff;
+    }    
+}
+
+
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 18px;
+
+    .form-col {
+        width: 100%;
+    }
+}
+
+.textarea {
+    margin-top: 5px;
+    margin-bottom: 28px;
+
+    .form-area {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .form-group-row {
+        flex-direction: column;
+    }
+}

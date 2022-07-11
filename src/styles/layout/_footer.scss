@@ -3,3 +3,139 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer-container {
+    width: 95%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+footer {
+    background-color: $mid-grey;
+}
+        
+.footer-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding-top: 35.5px;
+    padding-bottom: 44px;
+    padding-inline: 45.5px;
+    
+    border-bottom: 1px solid #242526;
+}   
+
+.footer-brand {
+    width: 168px;
+    height: 26.5px;
+}
+
+.footer-link-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+}
+
+.footer-link {
+    color: $text-color;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $brand-color;
+        text-decoration: none;
+    }
+}
+
+.social-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 17px;
+    width: 168px;
+
+    
+}
+
+.social-link {
+    color: $brand-color;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.social-icon-link {
+    width: 12px;
+    height: 12px;
+}
+
+.google-plus {
+    width: 14px;
+    height: 14px;
+}
+
+.copyright-div {
+    padding-top: 14.5px;
+    padding-bottom: 12px;
+}
+
+.copyright-text {
+    margin: 0;
+
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+    color: #4a4646;
+}
+
+@include media-breakpoint-down(lg) {
+    .footer-content-wrapper {
+        padding-inline: 30px;
+        padding-bottom: 24px;
+    }
+
+    .footer-link-wrapper {
+        gap: 40px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .social-icon-wrapper {
+        width: auto;
+    }
+}
+
+@include media-breakpoint-down(sm) {  
+    .footer-brand {
+        width: 140px;
+        height: auto;
+    }
+
+    .footer-content-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .copyright-div {
+        padding-inline: 30px;
+    }
+
+    .copyright-text {
+        text-align: left;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .footer-link-wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
